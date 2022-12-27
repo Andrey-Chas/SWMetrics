@@ -1,3 +1,5 @@
+"""TestShiftingContent"""
+
 import time
 import unittest
 
@@ -20,13 +22,16 @@ class TestShiftingContent(unittest.TestCase):
         time.sleep(2)
 
     def test_choosing_example_1(self):
+        """ChoosingFirstPage"""
         driver = self.driver
         self.assertIn(self.base_url, driver.current_url)
         self.assertIn(driver.title, "The Internet")
-        menu_element = driver.find_element(By.CSS_SELECTOR, ".example > a:nth-child(3)")
+        menu_element = driver.find_element(By.CSS_SELECTOR,
+                                           ".example > a:nth-child(3)")
         self.assertTrue(menu_element)
         menu_element.click()
-        powered_by = driver.find_element(By.CSS_SELECTOR, ".large-4 > div:nth-child(2) > a:nth-child(1)")
+        powered_by = driver.find_element(By.CSS_SELECTOR,
+                                         ".large-4 > div:nth-child(2) > a:nth-child(1)")
         self.assertTrue(powered_by)
         print("Found powered by")
         time.sleep(2)
@@ -35,13 +40,16 @@ class TestShiftingContent(unittest.TestCase):
         time.sleep(5)
 
     def test_choosing_example_2(self):
+        """ChoosingSecondPage"""
         driver = self.driver
         self.assertIn(self.base_url, driver.current_url)
         self.assertIn(driver.title, "The Internet")
-        an_image = driver.find_element(By.CSS_SELECTOR, ".example > a:nth-child(6)")
+        an_image = driver.find_element(By.CSS_SELECTOR,
+                                       ".example > a:nth-child(6)")
         self.assertTrue(an_image)
         an_image.click()
-        powered_by = driver.find_element(By.CSS_SELECTOR, ".large-4 > div:nth-child(2) > a:nth-child(1)")
+        powered_by = driver.find_element(By.CSS_SELECTOR,
+                                         ".large-4 > div:nth-child(2) > a:nth-child(1)")
         self.assertTrue(powered_by)
         print("Found powered by")
         time.sleep(2)
@@ -50,13 +58,16 @@ class TestShiftingContent(unittest.TestCase):
         time.sleep(5)
 
     def test_choosing_example_3(self):
+        """ChoosingThirdPage"""
         driver = self.driver
         self.assertIn(self.base_url, driver.current_url)
         self.assertIn(driver.title, "The Internet")
-        list1 = driver.find_element(By.CSS_SELECTOR, ".example > a:nth-child(9)")
+        list1 = driver.find_element(By.CSS_SELECTOR,
+                                    ".example > a:nth-child(9)")
         self.assertTrue(list1)
         list1.click()
-        powered_by = driver.find_element(By.CSS_SELECTOR, ".large-4 > div:nth-child(2) > a:nth-child(1)")
+        powered_by = driver.find_element(By.CSS_SELECTOR,
+                                         ".large-4 > div:nth-child(2) > a:nth-child(1)")
         self.assertTrue(powered_by)
         print("Found powered by")
         time.sleep(2)
